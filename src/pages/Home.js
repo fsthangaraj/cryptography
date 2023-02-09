@@ -59,7 +59,9 @@ export default function Home() {
                     <input className="border rounded bg-slate-50 w-[80%] h-10 px-2" placeholder="Output value" value={`${output !=null?output:''}`} />
                 </div>
                 <div className="mt-7 mx-3">
-                <button className="border px-5 py-[6px] rounded text-white bg-[#4993e1]  hover:bg-[#4994d0]" onClick={()=>copyToClipboard()} >Copy</button>
+                <button
+                disabled={copyText? false:true}
+                 className="border px-5 py-[6px] rounded text-white bg-[#4993e1]  hover:bg-[#4994d0]" onClick={()=>copyToClipboard()} >Copy</button>
                 </div>
             </div>
         </div>
